@@ -185,6 +185,8 @@ def getTemp():
             [ temp,hum ] = dht(temp_sensor, temp_sensor_type)
             t = str(temp)
             return jsonify({'temp': t})
+        except (IOError, TypeError) as e:
+            print "Error"
 
 if __name__ = '__main__':
     app.run(debug=True,host=webserverIp)
