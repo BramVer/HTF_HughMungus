@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Hugh Mungus - controlpanel - Mission to Mars</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+<ion-card>
+  <ion-card-header>
+    <div *ngIf="pressed">
+      <h2>ALARM!! PANIC!!</h2>
+    </div>
+
+    <div *ngIf="!pressed">
+      <h2>All good man</h2>
+    </div>
+  </ion-card-header>
+
+  <ion-list>
+    <ion-card>
+      <ion-card-header>
+        <div id="temperature">Temperature:   {{temperature}}</div>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <div id="sound">Sound level: {{sound}}</div>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <div id="distance">Distance:   {{distance}}</div>
+      </ion-card-header>
+    </ion-card>   
+    <ion-card>
+      <ion-card-header>
+        <div id="light">Light: {{light}}</div>
+      </ion-card-header>
+    </ion-card>
+  </ion-list>
+
+</ion-card>
+
+</ion-content>
